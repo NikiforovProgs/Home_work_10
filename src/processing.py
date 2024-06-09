@@ -11,6 +11,7 @@ def filter_by_state(key_list: list[dict[str, Any]], def_state: bool = True) -> l
             new_key_list.append(dict_list_key)
     return new_key_list
 
+
 def sort_by_date(date_list: list[dict[str, Any]], reverse_list: bool = True) -> list[dict[str, Any]]:
     '''Принимает список словарей, возвращает список
     отсортированных исходных словарей по убыванию даты'''
