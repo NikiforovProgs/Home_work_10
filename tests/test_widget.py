@@ -22,5 +22,14 @@ def test_card_type_gold():
 
 
 def test_account_number():
-    new_account_info_1: str = "Счет 73654108430135874305"
-    assert mask_card_number(new_account_info_1) == "Счет **4305"
+    new_account_info: str = "Счет 73654108430135874305"
+    assert mask_card_number(new_account_info) == "Счет **4305"
+
+
+def test_date():
+    new_date_info_1: str = "2014-12-05"
+    assert date_conversion(new_date_info_1) == "05.12.2014"
+    new_date_info_2: str = "2018 02 04"
+    assert date_conversion(new_date_info_2) == "04.02.2018"
+    new_date_info_3: str = "2011_03_07"
+    assert date_conversion(new_date_info_3) == "07.03.2011"
