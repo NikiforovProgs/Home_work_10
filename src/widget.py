@@ -3,15 +3,15 @@ def mask_card_number(card_number: str) -> str:
 
     #   Проверяем тип карты
     if "Visa Classic" in card_number:
-        masked_number = card_number[:17] + " " + card_number[18:20] + "** **** " + card_number[-4:]
+        masked_number = card_number[:17] + " " + card_number[17:19] + "** **** " + card_number[-4:]
     elif "Master Card" in card_number:
-        masked_number = card_number[:17] + " " + card_number[18:20] + "** **** " + card_number[-4:]
+        masked_number = card_number[:16] + " " + card_number[16:18] + "** **** " + card_number[-4:]
     elif "Счет" in card_number:
-        masked_number = card_number[:17] + " " + card_number[18:20] + "** **** " + card_number[-4:]
+        masked_number = card_number[:4] + " " + "**" + card_number[-4:]
     elif "Visa Platinum" in card_number:
-        masked_number = card_number[:17] + " " + card_number[18:20] + "** **** " + card_number[-4:]
+        masked_number = card_number[:18] + " " + card_number[18:20] + "** **** " + card_number[-4:]
     elif "Visa Gold" in card_number:
-        masked_number = card_number[:17] + " " + card_number[18:20] + "** **** " + card_number[-4:]
+        masked_number = card_number[:14] + " " + card_number[14:16] + "** **** " + card_number[-4:]
     return masked_number
 
 
